@@ -1,0 +1,105 @@
+<!--
+  Copyright 2014 yuki312 All Right Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<yuki312.android.imageryheader.ObservableScrollView
+        android:id="@+id/scroll_view"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+    <FrameLayout
+            android:id="@+id/scroll_view_child"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false">
+
+        <!-- Header Imagery -->
+        <FrameLayout
+                android:id="@+id/header_image_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:id="@+id/header_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+        </FrameLayout>
+
+        <!-- Body -->
+        <LinearLayout
+                android:id="@+id/body_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/window_background"
+                android:clipToPadding="false"
+                android:orientation="vertical">
+
+            <!-- TODO: Dummy View for scroll. remove this view.-->
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="777dp"
+                    android:text="I`m Dummy"
+                    />
+        </LinearLayout>
+
+        <!-- Header bar -->
+        <FrameLayout
+                android:id="@+id/header_bar_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="false">
+
+            <!-- background -->
+            <!-- height assigned dynamically, and fill the ActionBar gaps. -->
+            <View
+                    android:id="@+id/header_bar_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@color/colorPrimary"/>
+
+            <!-- contents -->
+            <LinearLayout
+                    android:id="@+id/header_bar_contents"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="16dp">
+
+                <TextView
+                        android:id="@+id/header_bar_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Placeholder"/>
+
+            </LinearLayout>
+
+            <!-- shadow -->
+            <View
+                    android:id="@+id/header_bar_shadow"
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="-6dp"
+                    android:background="@drawable/bottom_shadow"/>
+
+        </FrameLayout>
+    </FrameLayout>
+</yuki312.android.imageryheader.ObservableScrollView>

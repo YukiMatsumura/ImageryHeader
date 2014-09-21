@@ -1,0 +1,22 @@
+*.xml
+
+!/gradle.xml
+!/runConfigurations/*.xml
+!/copyright/*.xml
+!/fileColors.xml
+!/encodings.xml
+
+# only shared Project scheme
+!/codeStyleSettings.xml
+
+!/inspectionProfiles/*.xml
+/inspectionProfiles/profiles_settings.xml
+
+!/scopes/*.xml
+/scopes/scope_settings.xml
+
+!/templateLanguages.xml
+!/vcs.xml
+
+# for personal use
+# .idea/workspace.xml
